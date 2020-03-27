@@ -4,6 +4,13 @@ const video = document.querySelector(".flex");
 
 speed.addEventListener("mousemove", function(e) {
     const y = e.pageY - this.offsetTop;
-    console.log(y);
+    const percent = y / this.offsetHeight;
+    const min = 0.4;
+    const max = 4;
+    const height = Math.round(percent * 100) + "%";
+    bar.getElementsByClassName.height = height;
+    console.log(height);
+    console.log(percent);
+    // console.log(y);
     // console.log(e);
 });
